@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let color of colors; let i = index;" (click)="changeColor(color)">
+    <button md-fab [style.background-color]="color.hexValue" [ngClass]="{'active': color.current}">
+      <md-icon class="md-24"></md-icon>
+    </button>
+  </li>
+</ul>
+<label>Wielkość pióra</label>
+<input type="range" min="1" max="20" step="1" [(ngModel)]="range" (change)="rangeChange()">
+<p>Wybrana wielkość pióra: <strong>{{range}}</strong></p>
