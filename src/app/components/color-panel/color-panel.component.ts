@@ -14,17 +14,23 @@ export class ColorPanelComponent implements OnInit {
   private colors: Array<Color>;
   private black:  Color;
   private white: Color;
-  private dark_grey: Color;
-  private light_grey: Color;
+  private grey: Color;
+  private red: Color;
+  private yellow: Color;
+  private green: Color;
+  private blue: Color;
   public range: number;
 
   constructor() {
     this.black = {hexValue: "#000", current: false};
     this.white = {hexValue: "#fff", current: false};
-    this.dark_grey = {hexValue: "#848284", current: false};
-    this.light_grey = {hexValue: "#c4c2c4", current: false};
+    this.grey = {hexValue: "#848284", current: false};
+    this.red = {hexValue: "#f00", current: false};
+    this.yellow = {hexValue: "#f0ff00", current: false};
+    this.green = {hexValue: "#009c22", current: false};
+    this.blue = {hexValue: "#0f92e1", current: false};
 
-    this.colors = [this.black, this.white, this.dark_grey, this.light_grey];
+    this.colors = [this.black, this.white, this.grey, this.red, this.yellow, this.green, this.blue];
   }
   ngOnInit() {
     this.range = 5;
@@ -44,29 +50,3 @@ export class ColorPanelComponent implements OnInit {
     this.currentRange.emit(this.range);
   }
 }
-
-// <div data-color="#c4c2c4"></div>
-// <div data-color="#840204"></div>
-// <div data-color="#fc0204"></div>
-// <div data-color="#848204"></div>
-// <div data-color="#fcfe04"></div>
-// <div data-color="#048204"></div>
-// <div data-color="#04fe04"></div>
-// <div data-color="#048284"></div>
-// <div data-color="#04fefc"></div>
-// <div data-color="#040284"></div>
-// <div data-color="#0402fc"></div>
-// <div data-color="#840284"></div>
-// <div data-color="#fc02fc"></div>
-// <div data-color="#848244"></div>
-// <div data-color="#fcfe84"></div>
-// <div data-color="#044244"></div>
-// <div data-color="#04fe84"></div>
-// <div data-color="#0582fc"></div>
-// <div data-color="#84fefc"></div>
-// <div data-color="#044284"></div>
-// <div data-color="#8482fc"></div>
-// <div data-color="#8402fc"></div>
-// <div data-color="#fc0284"></div>
-// <div data-color="#844204"></div>
-// <div data-color="#fc8244"></div>
