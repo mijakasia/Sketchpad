@@ -12,8 +12,7 @@ export class CanvasComponent implements OnInit  {
   private boundries: any;
   private ctx: CanvasRenderingContext2D;
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     this.mousedown = false;
@@ -51,6 +50,8 @@ export class CanvasComponent implements OnInit  {
   }
 
   enableDrawning(e) {
+    if (e.which != 1) return;
+
     this.mousedown = true;
 
     this.ctx.beginPath();
