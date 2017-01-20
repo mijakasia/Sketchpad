@@ -1,4 +1,7 @@
 <div class="canvas" #canvasContainer>
   <canvas height="500px" width="500px" #Canvas on-mousedown="enableDrawning($event)" on-mouseup="disableDrawning()" on-mousemove="drawLines($event)"></canvas>
+  <div class="canvasButtons">
+    <button md-raised-button color="primary" (click)="clearCanvas()">Clear</button>
+  </div>
 </div>
 <app-color-panel (currentColor)="changeCurrent($event)" (currentRange)="changeRange($event)"></app-color-panel>

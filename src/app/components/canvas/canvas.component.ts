@@ -46,7 +46,6 @@ export class CanvasComponent implements OnInit  {
 
     this.ctx.lineTo(x, y);
     this.ctx.stroke();
-
   }
 
   enableDrawning(e) {
@@ -56,6 +55,8 @@ export class CanvasComponent implements OnInit  {
 
     this.ctx.beginPath();
     this.ctx.moveTo(this.getX(e), this.getY(e));
+
+    this.drawLines(e);
   }
 
   disableDrawning() {
@@ -80,4 +81,8 @@ export class CanvasComponent implements OnInit  {
     }
   }
 
+  clearCanvas() {
+    this.ctx.fillRect(0, 0, 500, 500);
+    this.disableDrawning();
+  }
 }
