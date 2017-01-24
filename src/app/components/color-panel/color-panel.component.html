@@ -5,6 +5,8 @@
     </button>
   </li>
 </ul>
-<label>Change Pen size</label>
-<input type="range" min="1" max="20" step="1" [(ngModel)]="range" (change)="rangeChange()">
-<p>Pen size: <strong>{{range}}</strong></p>
+<div class="penPanel">
+  <label>Change Pen size</label>
+  <input type="range" min="1" max="20" step="1" [(ngModel)]="range" (change)="rangeChange()">
+  <p>Pen size: <strong>{{range}}</strong></p>
+</div>

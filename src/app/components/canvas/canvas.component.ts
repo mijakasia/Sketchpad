@@ -8,6 +8,9 @@ import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 export class CanvasComponent implements OnInit  {
   @ViewChild("Canvas") Canvas: ElementRef;
   @ViewChild("canvasContainer") canvasContainer: ElementRef;
+  @ViewChild("images") images: ElementRef;
+
+
   private mousedown: boolean;
   private boundries: any;
   private ctx: CanvasRenderingContext2D;
@@ -84,5 +87,11 @@ export class CanvasComponent implements OnInit  {
   clearCanvas() {
     this.ctx.fillRect(0, 0, 500, 500);
     this.disableDrawning();
+  }
+
+  saveImage() {
+    let img = new Image();
+    img.src = this.Canvas.nativeElement.toDataURL();
+    this.images.nativeElement.appendChild(img);
   }
 }
