@@ -91,6 +91,7 @@ export class CanvasComponent implements OnInit  {
 
   saveImage() {
     let img = new Image();
+    img.setAttribute("style", "margin: 20px 0;")
     img.src = this.Canvas.nativeElement.toDataURL();
     this.images.nativeElement.appendChild(img);
   }
