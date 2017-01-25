@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
+import { GalleryComponent } from '../gallery';
 
 @Component({
   selector: 'app-canvas',
@@ -9,6 +10,7 @@ export class CanvasComponent implements OnInit  {
   @ViewChild("Canvas") Canvas: ElementRef;
   @ViewChild("canvasContainer") canvasContainer: ElementRef;
   @ViewChild("images") images: ElementRef;
+  @ViewChild(GalleryComponent) gallery: GalleryComponent;
 
 
   private mousedown: boolean;
@@ -93,6 +95,6 @@ export class CanvasComponent implements OnInit  {
     let img = new Image();
     img.setAttribute("style", "margin: 20px 0;")
     img.src = this.Canvas.nativeElement.toDataURL();
-    this.images.nativeElement.appendChild(img);
+    this.gallery.addImageToGallery(img);
   }
 }

@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { ColorPanelComponent } from './components/color-panel';
 import { CanvasComponent } from './components/canvas';
+import { GalleryComponent } from './components/gallery';
 
 
 
@@ -15,7 +16,8 @@ import { CanvasComponent } from './components/canvas';
   declarations: [
     AppComponent,
     ColorPanelComponent,
-    CanvasComponent
+    CanvasComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
